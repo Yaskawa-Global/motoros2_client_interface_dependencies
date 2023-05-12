@@ -46,7 +46,8 @@ git clone \
   https://github.com/ros-industrial/industrial_core.git \
   src/industrial_msgs
 
-# check build dependencies. First update the database
+# check build dependencies. First update databases
+sudo apt update
 source /opt/ros/humble/setup.bash
 rosdep update --rosdistro=$ROS_DISTRO
 
