@@ -37,14 +37,9 @@ git clone \
 
 # these need to be checked out from their repositories as they haven't
 # been released yet
-git clone \
-  -b main \
-  https://github.com/yaskawa-global/motoros2_interfaces.git \
-  src/motoros2_interfaces
-git clone \
-  -b ros2_msgs_only \
-  https://github.com/ros-industrial/industrial_core.git \
-  src/industrial_msgs
+vcs import \
+  --input src/motoros2_client_interface_dependencies/source_deps.repos \
+  src/
 
 # check build dependencies. First update databases
 sudo apt update
