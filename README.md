@@ -13,6 +13,14 @@ This package exists to facilitate installation of the ROS 2 packages containing 
 This package is an empty package and does not provide any interface definitions itself, nor does it host any code.
 Its sole task is to help `rosdep` install the MotoROS2 client dependencies on a (companion) PC.
 
+## Supported ROS 2 versions
+
+This package supports ROS 2 Foxy, Galactic and Humble.
+It is expected to also build successfully on other versions of ROS 2, but has only been tested on the previously mentioned releases.
+
+Please also take the compatibility of MotoROS2 with various ROS 2 releases into account.
+This information can be found in the [General Requirements](https://github.com/Yaskawa-Global/motoros2/blob/main/README.md#general-requirements) section of the main readme of MotoROS2 itself.
+
 ## Build and installation
 
 If necessary, create a Colcon / ROS 2 workspace and place a copy of the repository in the `src` space of that workspace (use `git clone` or download a `.zip` or `.tar.gz` from Github).
