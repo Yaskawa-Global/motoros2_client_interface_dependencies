@@ -23,6 +23,9 @@ This information can be found in the [General Requirements](https://github.com/Y
 
 ## Build and installation
 
+This procedure assumes that ROS 2 packages and development tools have been properly installed and sourced from the command line. 
+Please refer to the [ROS 2 installation guide](https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debians.html) for details.
+
 If necessary, create a Colcon / ROS 2 workspace and place a copy of the repository in the `src` space of that workspace (use `git clone` or download a `.zip` or `.tar.gz` from Github).
 
 ### Linux
@@ -69,6 +72,8 @@ colcon build \
   --mixin release \
   --packages-up-to motoros2_client_interface_dependencies
 ```
+
+If there are errors, such as `Command xxx not found`, please ensure that the `ros-dev-tools` package has been properly installed.
 
 If there were no warnings or errors, the workspace should now be activated using:
 
