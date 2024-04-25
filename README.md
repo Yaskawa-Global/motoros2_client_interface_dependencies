@@ -29,7 +29,13 @@ If necessary, create a Colcon / ROS 2 workspace and place a copy of the reposito
 
 The following instructions show an *example* workflow which would add `motoros2_client_interface_dependencies` to an existing Colcon workspace at `$HOME/colcon_ws`, install the dependencies and finally build the workspace for ROS 2 Humble.
 
+This procedure assumes that base ROS 2 packages and development tools have been installed and sourced from the command line.
+Please refer to [Installation / Ubuntu (Debian packages)](https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debians.html) for details on how to install ROS 2 Humble on Ubuntu.
+If you are using a different distribution of Linux, or a different version of ROS 2, make sure to refer to the appropriate documentation for that combination.
+
 Update commands where necessary if a different ROS 2 version should be used or the Colcon workspace is in a different location.
+
+If you run into errors (such as `Command [...] not found`), please ensure the `ros-dev-tools` package has been properly installed.
 
 As follows:
 
