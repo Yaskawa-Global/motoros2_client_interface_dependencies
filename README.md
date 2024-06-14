@@ -72,8 +72,8 @@ rosdep install \
 # build the package (including any dependencies). To build the entire
 # workspace, simply run 'colcon build'
 colcon build \
-  --mixin release \
-  --packages-up-to motoros2_client_interface_dependencies
+  --packages-up-to motoros2_client_interface_dependencies \
+  --cmake-args -DCMAKE_BUILD_TYPE=Release
 ```
 
 If there were no warnings or errors, the workspace should now be activated using:
