@@ -6,6 +6,8 @@
 
 [![support level: vendor](https://img.shields.io/badge/support%20level-vendor-brightgreen.svg)](http://rosindustrial.org/news/2016/10/7/better-supporting-a-growing-ros-industrial-software-platform)
 
+![Version: 0.1.1](https://img.shields.io/badge/version-0.1.1-informational.svg)
+
 ## Overview
 
 This package exists to facilitate installation of the ROS 2 packages containing message, service and action definitions used by client applications to communicate with a [MotoROS2](https://github.com/yaskawa-global/motoros2) server running on a Yaskawa Motoman industrial robot controller.
@@ -13,9 +15,13 @@ This package exists to facilitate installation of the ROS 2 packages containing 
 This package is an empty package and does not provide any interface definitions itself, nor does it host any code.
 Its sole task is to help `rosdep` install the MotoROS2 client dependencies on a (companion) PC.
 
+## Supported MotoROS2 versions
+
+Version `0.1.1` of this package is compatible with version `0.2.0` of MotoROS2.
+
 ## Supported ROS 2 versions
 
-This package supports ROS 2 Foxy, Galactic and Humble.
+This package supports ROS 2 Foxy, Galactic, Humble, and Jazzy.
 It is expected to also build successfully on other versions of ROS 2, but has only been tested on the previously mentioned releases.
 
 Please also take the compatibility of MotoROS2 with various ROS 2 releases into account.
@@ -27,10 +33,10 @@ If necessary, create a Colcon / ROS 2 workspace and place a copy of the reposito
 
 ### Linux
 
-The following instructions show an *example* workflow which would add `motoros2_client_interface_dependencies` to an existing Colcon workspace at `$HOME/colcon_ws`, install the dependencies and finally build the workspace for ROS 2 Humble.
+The following instructions show an *example* workflow which would add `motoros2_client_interface_dependencies` to an existing Colcon workspace at `$HOME/colcon_ws`, install the dependencies and finally build the workspace for ROS 2 Jazzy.
 
 This procedure assumes that base ROS 2 packages and development tools have been installed and sourced from the command line.
-Please refer to [Installation / Ubuntu (Debian packages)](https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debians.html) for details on how to install ROS 2 Humble on Ubuntu.
+Please refer to [Installation / Ubuntu (Debian packages)](https://docs.ros.org/en/jazzy/Installation/Ubuntu-Install-Debians.html) for details on how to install ROS 2 Jazzy on Ubuntu.
 If you are using a different distribution of Linux, or a different version of ROS 2, make sure to refer to the appropriate documentation for that combination.
 
 Update commands where necessary if a different ROS 2 version should be used or the Colcon workspace is in a different location.
@@ -44,6 +50,8 @@ As follows:
 cd $HOME/colcon_ws
 
 # retrieve the latest development version of this package
+# Note: if you wish to use a version other than the latest, you will need to
+# specify a tag/commit other than "master" in the following command.
 git clone \
   -b master \
   https://github.com/yaskawa-global/motoros2_client_interface_dependencies.git \
@@ -57,7 +65,7 @@ vcs import \
 
 # check build dependencies. First update databases
 sudo apt update
-source /opt/ros/humble/setup.bash
+source /opt/ros/jazzy/setup.bash
 rosdep update --rosdistro=$ROS_DISTRO
 
 # now install all dependencies.
