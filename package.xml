@@ -2,10 +2,11 @@
 <?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
 <package format="3">
   <name>motoros2_client_interface_dependencies</name>
-  <version>0.1.0</version>
+  <version>0.1.1</version>
   <description>Message, service and action dependencies for clients of MotoROS2</description>
   <maintainer email="g.a.vanderhoorn@tudelft.nl">G.A. vd. Hoorn (TU Delft Robotics Institute)</maintainer>
   <maintainer email="ted.miller@motoman.com">Ted Miller (Yaskawa Motoman)</maintainer>
+  <maintainer email="jimmy.mcelwain@motoman.com">Jimmy McElwain (Yaskawa Motoman)</maintainer>
 
   <license>Apache-2.0</license>
 

@@ -2,7 +2,7 @@ repositories:
   yaskawa-global/motoros2_interfaces:
     type: git
     url: https://github.com/yaskawa-global/motoros2_interfaces.git
-    version: main
+    version: 0.2.0
   ros-industrial/industrial_core_ros2_msgs_only:
     type: git
     url: https://github.com/ros-industrial/industrial_core.git

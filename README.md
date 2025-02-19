@@ -6,12 +6,18 @@
 
 [![support level: vendor](https://img.shields.io/badge/support%20level-vendor-brightgreen.svg)](http://rosindustrial.org/news/2016/10/7/better-supporting-a-growing-ros-industrial-software-platform)
 
+![Version: 0.1.1](https://img.shields.io/badge/version-0.1.1-informational.svg)
+
 ## Overview
 
 This package exists to facilitate installation of the ROS 2 packages containing message, service and action definitions used by client applications to communicate with a [MotoROS2](https://github.com/yaskawa-global/motoros2) server running on a Yaskawa Motoman industrial robot controller.
 
 This package is an empty package and does not provide any interface definitions itself, nor does it host any code.
 Its sole task is to help `rosdep` install the MotoROS2 client dependencies on a (companion) PC.
+
+## Supported MotoROS2 versions
+
+Version `0.1.1` of this package is compatible with version `0.2.0` of MotoROS2.
 
 ## Supported ROS 2 versions
 
@@ -44,6 +50,8 @@ As follows:
 cd $HOME/colcon_ws
 
 # retrieve the latest development version of this package
+# Note: if you wish to use a version other than the latest, you will need to
+# specify a tag/commit other than "master" in the following command.
 git clone \
   -b master \
   https://github.com/yaskawa-global/motoros2_client_interface_dependencies.git \
