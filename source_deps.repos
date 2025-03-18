@@ -6,4 +6,5 @@ repositories:
   ros-industrial/industrial_core_ros2_msgs_only:
     type: git
     url: https://github.com/ros-industrial/industrial_core.git
+    # branch name: ros2_msgs_only
     version: d547cdcfdaf3bc0d46325215b8219b0a190c8e6c
